@@ -1,0 +1,373 @@
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+    url("../fonts/ptsans-400.woff2") format("woff2"),
+    url("../fonts/ptsans-400.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  src: local("PT Sans"),
+    url("../fonts/ptsans-700.woff2") format("woff2"),
+    url("../fonts/ptsans-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  font-style: normal;
+  color: #333333;
+
+  background-color: #ffffff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.btn-brown {
+  background-color: #756157;
+}
+
+.btn-brown:hover,
+.btn-brown:focus {
+  background-color: #615048;
+}
+
+.btn-brown:active {
+  background-color: #756157;
+}
+
+.btn-blue {
+  background-color: #82b3d3;
+}
+
+.btn-blue:hover,
+.btn-blue:focus {
+  background-color: #68a2ca;
+}
+
+.btn-blue:active {
+  background-color: #82b3d3;
+}
+
+.btn-green {
+  background-color: #7db54f;
+}
+
+.btn-green:hover,
+.btn-green:focus {
+  background-color: #6c9e42;
+}
+
+.btn-green:active {
+  background-color: #7db54f;
+}
+
+.btn-transparent {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  color: #ffffff;
+
+  background-color: transparent;
+}
+
+.btn-transparent:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.btn:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.btn:disabled {
+  background-color: #e5e5e5;
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.subscribe {
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #333333;
+}
+
+.subscribe .section-title {
+  color: #ffffff;
+}
+
+.subscribe-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.user-email-field {
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.6);
+
+  background-color: #f2f2f2;
+}
+
+.main-nav {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.site-nav-link {
+  text-decoration: none;
+  color: #000000;
+}
+
+.footer-socials-link svg {
+  fill: #82b3d3;
+}
+
+.footer-socials-link:hover svg,
+.footer-socials-link:focus svg {
+  fill: #68a2ca;
+}
+
+.footer-socials-link:active svg {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.tel-link {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #000000;
+}
+
+.tel-link:hover,
+.tel-link:focus {
+  color: #756157;
+}
+
+.tel-link:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
+.html-academy-link svg {
+  fill: #000000;
+}
+
+.html-academy-link:hover svg,
+.html-academy-link:focus svg {
+  fill: #756157;
+}
+
+.html-academy-link:active svg {
+  fill: rgba(117, 97, 87, 0.3);
+}
+
+.promo {
+  text-align: center;
+
+  background-color: #333333;
+}
+
+.promo-images-wrapper {
+  background-image: url("../images/promo-decor.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+}
+
+.promo-title-img {
+  width: 458px;
+  height: 352px;
+}
+
+.promo-images-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lead {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.advantages {
+  text-align: center;
+}
+
+.advantages-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.advantages-list {
+  counter-reset: advantages-counter;
+}
+
+.advantages-item {
+  counter-increment: advantages-counter;
+}
+
+.advantage-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.advantage-title::after {
+  content: "- №" counter(advantages-counter) " -";
+
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.advantages-item:not(.advantages-item-small) .advantage-text-content {
+  color: #ffffff;
+
+  background-color: #82b3d3;
+}
+
+.advantages-item-small {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-item-small:nth-of-type(4) {
+  background-color: rgba(131, 179, 211, 0.2);
+}
+
+.advantages-item-small .advantage-title {
+  color: #000000;
+}
+
+.advantage-sublist {
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantage-sublist-item:nth-child(2) {
+  background-color: #ffffff;
+}
+
+.subadvantage-title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.trip-date {
+  text-align: center;
+}
+
+.trip-date-text {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+.index-subscribe {
+  background-image: url("../images/subscribe-background.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+}
+
+.catalog-main {
+  background-color: #333333;
+  background-image: url("../images/filters-background.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center top;
+}
+
+.catalog-main-title {
+  font-size: 60px;
+  line-height: 78px;
+  color: #ffffff;
+}
+
+.breadcrumbs-list {
+  font-size: 16px;
+}
+
+.breadcrumbs-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.breadcrumbs-link:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-main-content,
+.catalog-main .subscribe {
+  background-color: #ffffff;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card-title {
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.card-rating {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.pagination-link-current {
+  color: #000000;
+  background-color: #f2f2f2;
+}
+
+.catalog-subscribe {
+  color: #333333;
+}
+
+.catalog-subscribe .section-title {
+  color: #000000;
+}
