@@ -244,26 +244,6 @@ img {
   counter-increment: advantages-counter;
 }
 
-.advantage-title {
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
-}
-
-.advantage-title::after {
-  content: "- №" counter(advantages-counter) " -";
-
-  font-size: 18px;
-  line-height: 21px;
-  font-weight: 400;
-}
-
-.advantage-brightblue-bg .advantage-text-content {
-  color: #ffffff;
-
-  background-color: #82b3d3;
-}
-
 .advantage-lightblue-bg {
   background-color: rgba(131, 179, 211, 0.12);
 }
@@ -272,17 +252,34 @@ img {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantage-white-bg .advantage-title,
-.advantage-lightblue-bg .advantage-title,
-.advantage-darker-lightblue-bg .advantage-title {
+.advantage-white-bg {
+  background-color: #ffffff;
+}
+
+.advantage-brightblue-bg .advantage-text-content {
+  color: #ffffff;
+
+  background-color: #82b3d3;
+}
+
+.advantage-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
+}
+
+.advantage-white-bg .advantage-title,
+.advantage-lightblue-bg .advantage-title,
+.advantage-darker-lightblue-bg .advantage-title {
   color: #000000;
 }
 
-.advantage-white-bg {
-  background-color: #ffffff;
+.advantage-title::after {
+  content: "- №" counter(advantages-counter) " -";
+
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
 }
 
 .trip-date {
