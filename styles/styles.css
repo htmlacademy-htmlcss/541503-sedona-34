@@ -258,37 +258,31 @@ img {
   font-weight: 400;
 }
 
-.advantages-item:not(.advantages-item-small) .advantage-text-content {
+.advantage-brightblue-bg .advantage-text-content {
   color: #ffffff;
 
   background-color: #82b3d3;
 }
 
-.advantages-item-small {
+.advantage-lightblue-bg {
   background-color: rgba(131, 179, 211, 0.12);
 }
 
-.advantages-item-small:nth-of-type(4) {
+.advantage-darker-lightblue-bg {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.advantages-item-small .advantage-title {
-  color: #000000;
-}
-
-.advantage-sublist {
-  background-color: rgba(131, 179, 211, 0.12);
-}
-
-.advantage-sublist-item:nth-child(2) {
-  background-color: #ffffff;
-}
-
-.subadvantage-title {
+.advantage-white-bg .advantage-title,
+.advantage-lightblue-bg .advantage-title,
+.advantage-darker-lightblue-bg .advantage-title {
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   color: #000000;
+}
+
+.advantage-white-bg {
+  background-color: #ffffff;
 }
 
 .trip-date {
