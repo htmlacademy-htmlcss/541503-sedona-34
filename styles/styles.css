@@ -630,9 +630,12 @@ img {
 
 .pagination-link {
   box-sizing: border-box;
-  padding: 11px 23px 13px;
+  padding-top: 11px;
+  padding-bottom: 13px;
   width: 60px;
   height: 60px;
+
+  text-align: center;
 }
 
 .pagination-link-current {
@@ -645,8 +648,8 @@ img {
 
 .hotels-on-page {
   box-sizing: border-box;
-  width: 160px;
   padding: 14px 20px;
+  width: 160px;
 }
 
 .catalog-subscribe {
