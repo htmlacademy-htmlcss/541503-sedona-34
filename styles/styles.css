@@ -628,6 +628,13 @@ img {
   padding: 0;
 }
 
+.pagination-link {
+  box-sizing: border-box;
+  padding: 11px 23px 13px;
+  width: 60px;
+  height: 60px;
+}
+
 .pagination-link-current {
   color: #000000;
 
