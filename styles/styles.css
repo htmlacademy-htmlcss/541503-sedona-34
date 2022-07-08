@@ -1534,6 +1534,7 @@ img {
   background-image: url("../images/interface.svg");
   background-repeat: no-repeat;
   background-position: -74px -22px;
+  opacity: 0.3;
 }
 
 .search-form input:hover {
