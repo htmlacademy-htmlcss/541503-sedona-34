@@ -160,5 +160,64 @@
         </div>
       </footer>
     </div>
+    <div class="modal-container modal-container-shown">
+      <div class="modal modal-search">
+        <header class="modal-header modal-search-header">
+          <h2 class="section-title">Поиск гостиницы в Седоне</h2>
+          <button class="close-button modal-close-button" type="button">
+            <span class="visually-hidden">Закрыть</span>
+          </button>
+        </header>
+        <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+          <p class="input-large-group">
+            <label class="cheak-in-date-label" for="check-in-date-input">Дата заезда:</label>
+            <input class="check-in-date" id="check-in-date-input" name="check-in-date" type="text" value="27 апреля 2020">
+            <span class="input-info input-info-error">Мы не можем отправить вас в прошлое.</span>
+          </p>
+          <p class="input-large-group">
+            <label class="departure-date-label" for="departure-date-input">Дата выезда:</label>
+            <input class="departure-date" id="departure-date-input" name="departure-date" type="text" value="1 сентября 2021">
+            <span class="input-info input-info-valid">На эти даты есть свободные номера. Пока есть.</span>
+          </p>
+          <div class="inputs-small-group">
+            <label class="adults-quantity-label" for="adults-quantity-input">Взрослые:</label>
+            <div class="input-with-btns-wrapper">
+              <button class="input-number-btn quantity-decrease-btn" type="button"></button>
+              <input class="adults-quantity" id="adults-quantity-input" name="adults-quantity" type="number" value="2">
+              <button class="input-number-btn quantity-increase-btn" type="button"></button>
+            </div>
+            <div class="label-with-tooltip-wrapper">
+              <label class="kids-quantity-label" for="kids-quantity-input">Дети:</label>
+              <button class="tooltip-btn modal-search-tooltip-btn" aria-labelledby="tooltip-label" type="button">
+                <span class="visually-hidden">Информация</span>
+              </button>
+              <div class="tooltip" id="tooltip-label" role="tooltip">
+                <p class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+              </div>
+            </div>
+            <div class="input-with-btns-wrapper">
+              <button class="input-number-btn quantity-decrease-btn" type="button"></button>
+              <input class="kids-quantity" id="kids-quantity-input" name="kids-quantity" type="number" value="1">
+              <button class="input-number-btn quantity-increase-btn" type="button"></button>
+            </div>
+          </div>
+          <button class="btn-send modal-btn-send" type="submit">Найти</button>
+        </form>
+      </div>
+    </div>
+    <!--<div style="
+      position: absolute;
+      top: 0;
+      z-index: 13;
+      width: 1280px;
+      height: 3315px;
+      margin: 0 auto;
+      background-image: url('images/Modal.png');
+      background-repeat: no-repeat;
+      opacity: 0.5;
+      left: 50%;
+      transform: translateX(-50%);
+      filter: invert(1);
+    "></div> -->
   </body>
 </html>

@@ -66,43 +66,54 @@
               <fieldset class="infrastructure">
                 <legend class="fieldset-title">Инфраструктура:</legend>
                 <p>
-                  <input class="swimming-pool" id="swimming-pool-checkbox" name="swimming-pool" type="checkbox" checked>
+                  <input class="swimming-pool visually-hidden" id="swimming-pool-checkbox" name="swimming-pool" type="checkbox" checked>
                   <label class="swimming-pool-label" for="swimming-pool-checkbox">Бассейн</label>
                 </p>
                 <p>
-                  <input class="parking" id="parking-checkbox" name="parking" type="checkbox" checked>
+                  <input class="parking visually-hidden" id="parking-checkbox" name="parking" type="checkbox" checked>
                   <label class="parking-label" for="parking-checkbox">Парковка</label>
                 </p>
                 <p>
-                  <input class="wi-fi" id="wi-fi-checkbox" name="wi-fi" type="checkbox">
+                  <input class="wi-fi visually-hidden" id="wi-fi-checkbox" name="wi-fi" type="checkbox">
                   <label class="wi-fi-label" for="wi-fi-checkbox">Wi-Fi</label>
                 </p>
               </fieldset>
               <fieldset class="housing-type">
                 <legend class="fieldset-title">Тип Жилья:</legend>
                 <p>
-                  <input class="hotel" id="hotel-radio" name="housing" type="radio" value="hotel" checked>
+                  <input class="hotel visually-hidden" id="hotel-radio" name="housing" type="radio" value="hotel" checked>
                   <label class="hotel-label" for="hotel-radio">Гостиница</label>
                 </p>
                 <p>
-                  <input class="motel" id="motel-radio" name="housing" type="radio" value="motel">
+                  <input class="motel visually-hidden" id="motel-radio" name="housing" type="radio" value="motel">
                   <label class="motel-label" for="motel-radio">Мотель</label>
                 </p>
                 <p>
-                  <input class="appartments" id="appartments-radio" name="housing" type="radio" value="appartments">
+                  <input class="appartments visually-hidden" id="appartments-radio" name="housing" type="radio" value="appartments">
                   <label class="appartments-label" for="appartments-radio">Апартаменты</label>
                 </p>
               </fieldset>
               <fieldset class="filters-price">
                 <legend class="fieldset-title">Стоимость, &#8381;:</legend>
-                <p>
-                  <label class="min-price-label" for="filter-min-price">от</label>
-                  <input class="min-price" id="filter-min-price" name="min-price" type="text" value="0">
-                </p>
-                <p>
-                  <label class="max-price-label" for="filter-max-price">до</label>
-                  <input class="max-price" id="filter-max-price" name="max-price" type="text" value="9000">
-                </p>
+                <div class="range">
+                  <div class="range-inputs-wrapper">
+                    <p>
+                      <label class="range-input-label" for="filter-min-price">от</label>
+                      <input class="range-input min-price" id="filter-min-price" name="min-price" type="number" value="0">
+                    </p>
+                    <p>
+                      <label class="range-input-label" for="filter-max-price">до</label>
+                      <input class="range-input max-price" id="filter-max-price" name="max-price" type="number" value="9000">
+                    </p>
+                  </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 10px;
+                                                  width: 218px;">
+                      <button class="range-toggle range-toggle-min" type="button"></button>
+                      <button class="range-toggle range-toggle-max" type="button"></button>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="filters-btns">
                 <button class="btn btn-blue" type="submit">Применить</button>
@@ -115,11 +126,14 @@
           <div class="container-inner">
             <header class="catalog-main-content-header">
               <h2 class="section-title">Найдено гостиниц: <span class="hotels-found">38</span></h2>
-              <select class="sorting-select" aria-label="Сортировка">
-                <option value="cheap-first" selected>Сначала дешёвые</option>
-                <option value="expensive-first">Сначала дорогие</option>
-                <option value="popular-first">Сначала популярные</option>
-              </select>
+              <p class="select-wrapper">
+                <label class="sorting-select-label visually-hidden" for="hotels-sorting-select">Сортировать по признаку:</label>
+                <select class="sorting-select" id="hotels-sorting-select" aria-label="Сортировка">
+                  <option value="cheap-first" selected>Сначала дешёвые</option>
+                  <option value="expensive-first">Сначала дорогие</option>
+                  <option value="popular-first">Сначала популярные</option>
+                </select>
+              </p>
               <ul class="layout-menu">
                 <li class="layout-item">
                   <a class="layout-btn layout-btn-current" href="#">
@@ -241,7 +255,7 @@
                   <a class="btn btn-blue pagination-link" href="#">10</a>
                 </li>
               </ul>
-              <p>
+              <p class="select-wrapper">
                 <label for="hotels-quantity">Гостиниц на странице:</label>
                 <select class="hotels-on-page" id="hotels-quantity">
                   <option value="1">1</option>
