@@ -270,6 +270,7 @@ img {
 
 .catalog-main-content select {
   position: relative;
+  z-index: 1;
 
   padding: 12px 52px 12px 19px;
   min-height: 48px;
