@@ -84,7 +84,12 @@ img {
 .index-main a:focus,
 .catalog-main a:focus,
 .index-main button:focus,
-.catalog-main button:focus {
+.catalog-main button:focus,
+.catalog-main select:focus,
+.index-main input:focus,
+.catalog-main input:focus,
+.search-form input:focus,
+.search-form button:focus {
   outline: none;
 }
 
@@ -111,9 +116,7 @@ img {
 }
 
 .btn-brown:hover,
-.btn-brown:focus,
-.card-link:hover ~ .btn-brown,
-.card-link:focus ~ .btn-brown {
+.btn-brown:focus {
   background-color: #615048;
 }
 
@@ -198,17 +201,12 @@ img {
 .subscribing-form {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
   margin: 0 auto;
   width: 800px;
 }
 
-.subscribing-form p {
-  margin: 0;
-  margin-bottom: 20px;
-}
-
 .user-email-field {
+  margin-bottom: 20px;
   padding: 21px 22px 18px 22px;
   width: 600px;
   min-height: 60px;
@@ -244,6 +242,10 @@ img {
   border-bottom-left-radius: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+}
+
+.subscribing-form .btn-send {
+  margin-bottom: 20px;
 }
 
 .select-wrapper {
@@ -369,10 +371,10 @@ img {
   margin-right: auto;
   padding: 0;
   list-style-type: none;
-  max-width: 600px;
+  max-width: 550px;
 }
 
-.site-nav-item:not(:last-child) {
+.site-nav-item {
   margin-right: 24px;
 }
 
@@ -416,7 +418,7 @@ img {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  max-width: 274px;
+  max-width: 328px;
 }
 
 .user-nav-item {
@@ -486,6 +488,7 @@ img {
   align-self: center;
   padding: 9px 15px 8px;
   min-width: 160px;
+  max-width: 180px;
 
   text-align: center;
 }
@@ -494,9 +497,9 @@ img {
   margin-top: 10px;
 }
 
+.user-nav .btn-brown:hover,
 .user-nav .btn-brown:focus {
   outline: none;
-  background-color: #615048;
 }
 
 .page-footer a {
@@ -1021,16 +1024,21 @@ img {
 
 .infrastructure label,
 .housing-type label {
+  position: relative;
+
   display: flex;
   flex-wrap: wrap;
+  padding-left: 39px;
 }
 
 .infrastructure label::before,
 .housing-type label::before {
   content: "";
 
-  display: block;
-  margin-right: 19px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
   width: 20px;
   height: 20px;
 
@@ -1131,7 +1139,7 @@ img {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-.range-input:focus {
+.filters-form .range-input:focus {
   outline: 2px solid #81b3d3;
   box-shadow: inset 0 0 0 2px #91b3d3;
 }
@@ -1245,8 +1253,7 @@ img {
 }
 
 .filters-btns .btn-transparent:focus {
-  margin-top: 20px;
-
+  margin-top: 13px;
   color: #ffffff;
 
   border: 3px solid #83b3d3;
@@ -1377,6 +1384,17 @@ img {
 
 .card-link {
   text-decoration: none;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-link:hover,
+.card-link:focus {
+  opacity: 0.7;
+}
+
+.card-link:active {
+  opacity: 0.5;
 }
 
 .card-img {
@@ -1550,7 +1568,7 @@ img {
 
 .modal {
   position: relative;
-  top: 396px;
+  top: 50%;
   z-index: 11;
 
   margin: 0 auto;
@@ -1559,6 +1577,8 @@ img {
   background-color: #ffffff;
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+
+  transform: translateY(-50%);
 }
 
 .modal-search {
@@ -1600,6 +1620,7 @@ img {
 }
 
 .modal-close-button:focus {
+  outline: none;
   border: 3px solid #83b3d3;
 }
 
@@ -1622,7 +1643,14 @@ img {
 }
 
 .modal-close-button::after {
-  transform: translate(-8.5px, 0) rotate(45deg);
+  transform: translate(-7.5px, 0) rotate(45deg);
+}
+
+
+@-moz-document url-prefix("") {
+  .modal-close-button::after {
+    transform: translate(-8.5px, 0) rotate(45deg);
+  }
 }
 
 .search-form {
@@ -1651,7 +1679,7 @@ img {
   grid-template-columns: 139px 170px 80px 133px;
   column-gap: 18px;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .search-form label {
@@ -1730,6 +1758,8 @@ img {
 }
 
 .search-form input[type="number"] {
+  padding-right: 34px;
+  padding-left: 34px;
   width: 100%;
 
   font: inherit;
@@ -1810,6 +1840,14 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.filters-form input:disabled,
+.filters-form input:disabled + label::before,
+.subscribing-form input:disabled,
+.search-form input:disabled {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: none;
+}
+
 .label-with-tooltip-wrapper {
   position: relative;
 
@@ -1887,7 +1925,8 @@ img {
 
 .modal-btn-send {
   margin-left: 3px;
-  padding-top: 9px;
+  padding-top: 6px;
+  padding-bottom: 9px;
   width: 575px;
 
   font-family: "PT Sans", sans-serif;
@@ -1899,6 +1938,7 @@ img {
   color: #ffffff;
 
   background-color: #83b3d3;
+  border: 3px solid transparent;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
